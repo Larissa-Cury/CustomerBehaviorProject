@@ -49,7 +49,7 @@ else "Pacific"
 
 ### Creating the `fact_sales` table 
 
-- Given that the column `Purchase Date` provides not only the dates but also the timestamps of each purchase, I used it to identify unique orders. I applied "remove duplicates" in this column.
+- Given that the column `Purchase Date` provides not only the dates but also the timestamps of each purchase, I used it to identify unique orders. I applied `remove duplicates` in this column.
    - I removed the following columns: `Customer Age`, `Returns`, `Customer Name`, `Gender`
   
 - Creating the "Order ID" Column
