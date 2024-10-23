@@ -60,6 +60,11 @@ else "Pacific"
   - Then I transformed `Order ID` from whole numbers to Text;
   - Then I deleted the `Index` column.
 
+### Creating the `dim_calendar` table
+
+
+
+
    
 
 
