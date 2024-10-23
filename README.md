@@ -76,8 +76,40 @@ else "Pacific"
 - Step 2: I created 2 new date parameters called `minDate` and `maxDate` containing the min and max dates from the dataset
 
 - Step 3: I created a list of dates
-   - I created a new query in which I created `MinDate` and `MaxDate` steps by attributing their equivalent date parameters I created in the previous step; 
+   - I created a new query in which I created `MinDate` and `MaxDate` steps by attributing their value to the equivalent date parameters I created in the previous step; 
    - I created a new step called `Quant Days" by ```= Duration.Days(MaxDate - MinDate) + 1```
+   - I then added a new step called `XXX` and attributed the value `List.Dates(MinDate, daysQuant, #duration(1,0,0,0))` to it
+       - `List.Dates()` creates a list of dates starting at `MinDate` plus `daysQuant` number of days incrementing by 1 day `#duration(1,0,0,0))`
+       - _Note._ 1: Represents 1 day, 0: Represents 0 hours, 0: Represents 0 minutes and 0: Represents 0 seconds.
+   - Finally, I transformed the list to a table by right-clicking on the list and choosing `to table` option
+
+ <div align="center">
+  <img width="500" height="320" 
+       src="https://drive.google.com/uc?id=1la9wOyJQV0O54ZIBDyO8wL6sfrmYOQ3v">
+</div>
+
+- Step 4: Transforming the column into a date format
+   - I renamed the table as  `dim_calendar` and also the column as `Date`
+   - I changed the cell value's format to `Date` format
+ 
+- Step 5: Creating new columns based on the `Date` Column
+   - With the `Date` column selected, I went to [x] `Add Columns` > `Date` and created the following columns:
+      - Year
+      - Month
+      - Name of the Month
+      - Quarter
+      - Day
+      - Name of the Day
+
+- Step 6: Adding Custom Columns based on `dim_calendar` columns
+      - `Short Month` was created using the formula `Text.Start([Month Name],3)`
+      - `Year Month` was created using the formula `Date.ToText([Date], "yyyy MMM")`
+      - `Quarter Text` was created using the formula `"Q" & Number.ToText([Quarter])`
+  
+    _Note._ I right-clicked the text columns to put their first letter in capitals by clicking on `Transform`
+    _Note 2._ If your system is not in English, then you'll need to add the English names manually by custom columns such as `Date.ToText([Date], "MMMM", "en-US")`
+
+- Step 7: Creating a relantionship between `Purchase Date` from `fact_sales`  and `Date` from `Dim_Calendar`
 
 
 
