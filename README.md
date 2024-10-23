@@ -54,6 +54,16 @@ else if [randomNumber] = 5 then "West"
 else "Pacific"
 ```
 
+- Creating the `Agr Group` Column
+
+   - I created this column according to the formula:
+   ```
+   if [Customer Age] >= 18 and [Customer Age] < 25 then "Young Adult"
+   else if [Customer Age] >= 25 and [Customer Age] < 55 then "Adult"
+   else "Elder"
+   ```
+  
+
 ### Creating the `dim_calendar` table
 
 * The _dim_calendar_ table was creating following the steps described below the picture.
