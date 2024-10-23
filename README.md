@@ -9,7 +9,7 @@ This is the repository that describes my Power Bi project which aims to analyse 
 * The `dim_calendar` table was creating following the steps described below the picture.
 
  <div align="center">
-  <img width="500" height="320" 
+  <img width="900" height="420" 
        src="https://drive.google.com/uc?id=173CEUJ6Zt85daKprqmL85BDIqei9YwTV">
 </div>
 
