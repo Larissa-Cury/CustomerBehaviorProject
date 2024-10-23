@@ -23,16 +23,18 @@ if Number.Round(Number.RandomBetween(0,1)) = 1 then "Single" else "Married"
 
 - Creating the "Region" Column
   
-  - [x] `Add Columns` > `Add Custom Column`
-  - I first created a temporary column called `randomNumber`, using the formula below, to store values from 1 to 6 following the same rationale described for the `Marital Status` column
+  - I first added a new temporary column by [x] `Add Columns` > `Add Custom Column`, which I called `randomNumber`;
+  - I created the column based on the formula below;
+  - The column to store values from 1 to 6 following the same rationale described for the `Marital Status` column
  
 ```
 Number.Round(Number.RandomBetween(1,6)))
 ```
 
-  - [x] `Add Columns` > `Add Custom Column`
-  -  I created the column based on the formula below.
-  - The IF statement attributes either Northeast, Southeast, Midwest, Southwest, West, Pacific according to the numbers originated in `RandomNumbers`
+  - I first added a new column by [x] `Add Columns` > `Add Custom Column`;
+  - I created the column based on the formula below;
+  - The IF statement attributes either Northeast, Southeast, Midwest, Southwest, West, Pacific according to the numbers originated in `RandomNumbers`;
+  - Then I deleted the temporary column
 
 ```
 if [randomNumber] = 1 then "Northeast"
@@ -42,3 +44,26 @@ else if [randomNumber] = 4 then "Southwest"
 else if [randomNumber] = 5 then "West"
 else "Pacific"
 ```
+
+### Creating the `fact_sales` table 
+
+- Given that the column `Purchase Date` provides not only the dates but also the timestamps of each purchase, I used it to identify unique orders. I applied "remove duplicates" in this column.
+   - I removed the following columns: `Customer Age`, `Returns`, `Customer Name`, `Gender`
+  
+- Creating the "Order ID" Column
+ 
+  - I first created an Index Column by [x] `Add Columns` > `Add Index Column` > `Start From 1`
+  - Then I created a custom column using the formula:  `[Index] + 1000`
+  - Then I transformed `Order ID` from whole numbers to Text;
+  - Then I deleted the `Index` column.
+
+   
+
+
+
+
+
+
+
+
+
