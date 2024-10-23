@@ -59,7 +59,7 @@ else "Pacific"
 * The _dim_calendar_ table was creating following the steps described below the picture.
 
  <div align="center">
-  <img width="500" height="320" 
+  <img width="900" height="420" 
        src="https://drive.google.com/uc?id=1la9wOyJQV0O54ZIBDyO8wL6sfrmYOQ3v">
 </div>
  
@@ -85,7 +85,7 @@ else "Pacific"
    - Finally, I transformed the list to a table by right-clicking on the list and choosing `to table` option
 
  <div align="center">
-  <img width="500" height="320" 
+  <img width="900" height="420" 
        src="https://drive.google.com/uc?id=1raln5QNU5lBfqINJPBeJATmHEaWpeS2m">
 </div>
 
@@ -119,7 +119,7 @@ else "Pacific"
   -_Note._ The OG dataset does not provide a `Product Id` key, this is why I didn't break the table down into a `dim_product` one
 
 <div align="center">
-  <img width="500" height="320" 
+  <img width="900" height="420"
        src="https://drive.google.com/uc?id=1v__rLH6k_msWIM8zXmQxl52GAMAg_7zN">
 </div>
 
