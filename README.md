@@ -62,6 +62,24 @@ else "Pacific"
 
 ### Creating the `dim_calendar` table
 
+- Step 1: I first created an empty query to obtain the min and max dates from `fact_sales`;
+   - In the advanced editor, I used the following code:
+   
+     ```
+     = let
+       Source = fact_sales,
+       MinDate = List.Min(Source[Purchase Date]), // Extract Min date from Purchase Date
+       MaxDate = List.Max(Source[Purchase Date])  // Extract Maxc date from Purchase Date
+   in
+       [MinDate = MinDate, MaxDate = MaxDate]
+     ```
+- Step 2: I created 2 new date parameters called `minDate` and `maxDate` containing the min and max dates from the dataset
+
+- Step 3: I created a list of dates
+   - I created a new query in which I created `MinDate` and `MaxDate` steps by attributing their equivalent date parameters I created in the previous step; 
+   - I created a new step called `Quant Days" by ```= Duration.Days(MaxDate - MinDate) + 1```
+
+
 
 
 
