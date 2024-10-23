@@ -14,9 +14,9 @@ This is the repository that describes my Power Bi project which aims to analyse 
    - I added a new custom column by
      [x] `Add Columns` > `Add Custom Column`
    - I used the formula below to create the column:
-         - It first creates a random number between 0 and 1 `Number.RandomBetween(0,1)`;
-         - Then `Number.Round` rounds this number to either 0 or 1;
-         - Then the IF statement addresses "Single" to "1" and "Married" to 0
+     - It first creates a random number between 0 and 1 `Number.RandomBetween(0,1)`;
+     - Then `Number.Round` rounds this number to either 0 or 1;
+     - Then the IF statement addresses "Single" to "1" and "Married" to 0
    
 ```
 if Number.Round(Number.RandomBetween(0,1)) = 1 then "Single" else "Married"
@@ -27,7 +27,7 @@ if Number.Round(Number.RandomBetween(0,1)) = 1 then "Single" else "Married"
   - I first added a new temporary column called `randomNumber` by
     [x] `Add Columns` > `Add Custom Column`
   - I created the column based on the formula below;
-        - The column stores values from 1 to 6 following the same rationale described for the `Marital Status` column
+    - The column stores values from 1 to 6 following the same rationale described for the `Marital Status` column
  
 ```
 Number.Round(Number.RandomBetween(1,6)))
@@ -35,7 +35,7 @@ Number.Round(Number.RandomBetween(1,6)))
 
   - I first added a new column by [x] `Add Columns` > `Add Custom Column`;
   - I created the column based on the formula below:
-        - The IF statement attributes either Northeast, Southeast, Midwest, Southwest, West, Pacific according to the numbers originated in `RandomNumbers`;
+    - The IF statement attributes either Northeast, Southeast, Midwest, Southwest, West, Pacific according to the numbers originated in `RandomNumbers`;
   - Then I deleted the temporary column
 
 ```
