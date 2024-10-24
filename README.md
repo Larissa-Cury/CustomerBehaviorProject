@@ -144,6 +144,18 @@ else "Pacific"
   - Then I transformed `Order ID` from whole numbers to Text;
   - Then I deleted the `Index` column.
 
+ - Creating the `Purchase Device` column
+    - I first created a temporary table called `RandomNumber2` by using
+```
+Number.Round(Number.RandomBetween(1,3)))
+```
+   - Then, I attributed the device names to the numbers created in `RandomNumber2`
+```
+if [randomNumber2] = 1 then "Mobile"
+else if [randomNumber2] = 2 then "Desktop"
+else "Tablet"
+```
+
 
 
 
